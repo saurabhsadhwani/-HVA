@@ -1,0 +1,207 @@
+version: "3.0"
+
+rules:
+
+- rule: rule_greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: rule1
+  steps:
+  - intent: symp1
+  - slot_was_set:
+    - disease: Typhoid
+  - action: utter_ask1
+
+- rule: rule2
+  steps:
+  - intent: symp2
+  - slot_was_set:
+    - disease: Typhoid
+  - action: utter_ask2
+
+- rule: rule3
+  steps:
+  - intent: symp3
+  - slot_was_set:
+    - disease: Typhoid
+  - action: utter_ask3
+
+- rule: rule4
+  steps:
+  - intent: symp4
+  - slot_was_set:
+    - disease: Typhoid
+  - action: utter_ask4
+
+- rule: rule5
+  steps:
+  - intent: symp5
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask5
+
+- rule: rule6
+  steps:
+  - intent: symp6
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask6
+
+- rule: rule7
+  steps:
+  - intent: symp7
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask7
+
+- rule: rule8
+  steps:
+  - intent: symp8
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask8
+
+- rule: rule9
+  steps:
+  - intent: symp9
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask9
+
+- rule: rule10
+  steps:
+  - intent: symp10
+  - slot_was_set:
+    - disease: Migrane
+  - action: utter_ask10
+
+- rule: rule11
+  steps:
+  - intent: symp11
+  - slot_was_set:
+    - disease: Migrane
+  - action: utter_ask11
+
+- rule: rule12
+  steps:
+  - intent: symp12
+  - slot_was_set:
+    - disease: Migrane
+  - action: utter_ask12
+
+- rule: rule13
+  steps:
+  - intent: symp13
+  - slot_was_set:
+    - disease: Migrane
+  - action: utter_ask13
+
+- rule: rule1d
+  steps:
+  - intent: deny1
+  - slot_was_set:
+    - disease: Typhoid
+  - action: utter_ask_alternative
+
+- rule: rule2d
+  steps:
+  - intent: deny2
+  - slot_was_set:
+    - disease: Typhoid
+  - action: utter_ask_alternative
+
+- rule: rule3d
+  steps:
+  - intent: deny3
+  - slot_was_set:
+    - disease: Typhoid
+  - action: utter_ask_alternative
+
+- rule: rule4d
+  steps:
+  - intent: deny4
+  - slot_was_set:
+    - disease: Typhoid
+  - action: utter_ask_alternative
+
+- rule: rule5d
+  steps:
+  - intent: deny5
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask_alternative
+
+- rule: rule6d
+  steps:
+  - intent: deny6
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask_alternative
+
+- rule: rule6d
+  steps:
+  - intent: deny6
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask_alternative
+
+- rule: rule7d
+  steps:
+  - intent: deny7
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask_alternative
+
+- rule: rule8d
+  steps:
+  - intent: deny8
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask_alternative
+
+- rule: rule9d
+  steps:
+  - intent: deny9
+  - slot_was_set:
+    - disease: Dengue
+  - action: utter_ask_alternative
+
+- rule: rule10d
+  steps:
+  - intent: deny10
+  - slot_was_set:
+    - disease: Migrane
+  - action: utter_ask_alternative
+
+- rule: rule11d
+  steps:
+  - intent: deny11
+  - slot_was_set:
+    - disease: Migrane
+  - action: utter_ask_alternative
+
+- rule: rule12d
+  steps:
+  - intent: deny12
+  - slot_was_set:
+    - disease: Migrane
+  - action: utter_ask_alternative
+
+- rule: rule13d
+  steps:
+  - intent: deny13
+  - slot_was_set:
+    - disease: Migrane
+  - action: utter_ask_alternative
+
+- rule: rule_predict
+  steps:
+  - intent: predict
+  - action: action_predict
+
+- rule: rule_thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks

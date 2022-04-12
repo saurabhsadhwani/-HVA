@@ -1,0 +1,264 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - नमस्ते
+    - अरे
+    - हेलो
+    - हाय बॉट
+    - अरे बॉट
+    - नमस्कार
+    - शुभ प्रभात
+    - हाय मिस्टर
+    - हाय पाल!
+    - सलाम अलैकुम
+    - आपके हे कोन?
+    - और बताओ क्या हो रहा है
+    - कैसे हैं आप?
+
+- intent: goodbye
+  examples: |
+    - अलविदा
+    - बाद में मिलते है
+    - बाय बॉट
+    - अलविदा दोस्त
+    - अभी के लिए बाय
+    - बाद में मिलता हूँ
+    - मुझे जाना है
+    - फिर मिलते हैं
+    - शुभ रात्रि
+    - आपका दिन शुभ हो
+    - मैं जा रहा हूँ
+    - हम जल्द ही बात करेंगे
+    - समाप्त
+    - समाप्ति
+    - अंत 
+    - समाप्त 
+    - खत्म
+
+- intent: affirm
+  examples: |
+    - हाँ
+    - हाँ यकीनन
+    - पूर्ण रूप से
+    - पक्का
+    - हाँ हाँ हाँ
+    - निश्चित रूप से
+    - हाँ इसने किया।
+
+- intent: deny
+  examples: |
+    - नहीं
+    - नहीं न
+    - कभी नहीं
+    - मुझे ऐसा नहीं लगता
+    - ऐसा नहीं है
+    - किसी तरह नहीं
+    - ज़रुरी नहीं
+    - एन
+    - जी नहीं
+
+- intent: thanks
+  examples: |
+    - धन्यवाद
+    - धन्यवाद बॉट
+    - उसके लिए धन्यवाद
+    - चीयर्स
+    - चीयर्स ब्रो
+    - ठीक है धन्यवाद!
+    - सब कुछ के लिए एक गुच्छा धन्यवाद
+    - मदद के लिए धन्यवाद
+    - बहुत बहुत धन्यवाद
+    - अद्भुत, धन्यवाद
+    - हाँ धन्यवाद!
+
+- intent: predict
+  examples: |
+    - क्या आप मुझे मेरी बीमारी बताएंगे
+    - मैं अपनी बीमारी जानना चाहता हूँ
+    - किस बीमारी से मैं पीड़ित हूं
+    - मैं किस बीमारी से पीड़ित हूं
+    - में अपनी बीमारी के बारे में जनंना चाहता हूँ
+    - क्या आप मुझे बता सकते है कि में किस बीमारी से पीड़ित हूँ
+    - बस इतना ही
+
+# Typhoid
+- intent: symp1
+  examples: |
+    - मुझे [ठंड]{"entity":"disease","value":"Typhoid"} लग रही है
+
+# क्या आपको उल्टियां है?
+
+- intent: symp2
+  examples: |
+    - हां मुझे [उल्टियां]{"entity":"disease","value":"Typhoid"} है
+
+# क्या आपको मसूड़ों में दर्द है? - No
+# क्या आप हमें बता सकते हैं कि आपको और क्या क्या लक्षण हैं?
+
+- intent: symp3
+  examples: |
+    - मुझे [थकावट]{"entity":"disease","value":"Typhoid"} महसूस हो रही है
+    - मुझे [थकान]{"entity":"disease","value":"Typhoid"} महसूस हो रही है
+
+# क्या आपको तेज बुखार है?
+
+- intent: symp4
+  examples: |
+    - हां मुझे [तेज]{"entity":"disease","value":"Typhoid"} बुखार है
+
+# क्या आप की आंखों में जलन है - No
+# क्या आप हमें बता सकते हैं कि आपको और क्या क्या लक्षण हैं ?
+# predict : Typhoid
+
+
+
+
+# Dengue
+- intent: symp5
+  examples: |
+    - मुझे [खुजली]{"entity":"disease","value":"Dengue"} हो रही है
+
+# क्या आपको उच्च बुखार है
+
+- intent: symp6
+  examples: |
+    - हां मुझे [उच्च]{"entity":"disease","value":"Dengue"} बुखार है
+
+# क्या आपको जोड़ों में दर्द है
+
+- intent: symp7
+  examples: |
+    - हां मुझे [जोड़ों]{"entity":"disease","value":"Dengue"} में दर्द है
+
+# क्या आपको गर्दन दर्द है? - No
+# क्या आप हमें बता सकते हैं कि आपको और क्या क्या लक्षण हैं ?
+
+- intent: symp8
+  examples: |
+    - मुझे [स्किन]{"entity":"disease","value":"Dengue"} रैश है
+
+# क्या आपको भूख में कमी है
+
+- intent: symp9
+  examples: |
+    - हां मुझे [भूख]{"entity":"disease","value":"Dengue"} में कमी है
+
+# क्या आपको पिली पेशाब है? - No
+# क्या आप हमें बता सकते हैं कि आपको और क्या क्या लक्षण हैं ?
+# predict : Dengue
+
+
+
+
+# Migrane
+- intent: symp10
+  examples: |
+    - मुझे [सर]{"entity":"disease","value":"Migrane"} दर्द है
+
+# क्या आपको डिहाइड्रेशन है? - No
+# क्या आप हमें बता सकते हैं कि आपको और क्या क्या लक्षण हैं ?
+
+- intent: symp11
+  examples: |
+    - मुझे [एसिडिटी]{"entity":"disease","value":"Migrane"} है
+
+# क्या आपको चिड़चिड़ापन है?
+
+- intent: symp12
+  examples: |
+    - हां मुझे [चिड़चिड़ापन]{"entity":"disease","value":"Migrane"} है
+
+# क्या आपको विजुअल डिस्टरबेंस है?
+
+- intent: symp13
+  examples: |
+    - हां मुझे [विजुअल]{"entity":"disease","value":"Migrane"} डिस्टरबेंस है
+
+# क्या आपको घुटने का दर्द है? - No
+# क्या आप हमें बता सकते हैं कि आपको और क्या क्या लक्षण हैं ?
+# predict : Migrane
+
+
+
+- intent: deny1
+  examples: |
+    - नहीं मुझे [उल्टियां]{"entity":"disease","value":"Typhoid"} नहीं है
+
+- intent: deny2
+  examples: |
+    - नहीं मुझे [मसूड़ों]{"entity":"disease","value":"Typhoid"} में दर्द नहीं है
+
+- intent: deny3
+  examples: |
+    - नहीं मुझे [तेज]{"entity":"disease","value":"Typhoid"} बुखार नहीं है
+
+- intent: deny4
+  examples: |
+    - नहीं मुझे [आंखों]{"entity":"disease","value":"Typhoid"} में जलन नहीं है
+
+- intent: deny5
+  examples: |
+    - नहीं मुझे [उच्च]{"entity":"disease","value":"Dengue"} बुखार नहीं है
+
+- intent: deny6
+  examples: |
+    - नहीं मुझे [जोड़ों]{"entity":"disease","value":"Dengue"} में दर्द नहीं है
+
+- intent: deny7
+  examples: |
+    - नहीं मुझे [गर्दन]{"entity":"disease","value":"Dengue"} दर्द नहीं है
+
+- intent: deny8
+  examples: |
+    - नहीं मुझे [भूख]{"entity":"disease","value":"Dengue"} में कमी नहीं है
+
+- intent: deny9
+  examples: |
+    - नहीं मुझे पिली [पेशाब]{"entity":"disease","value":"Dengue"} नहीं है
+
+- intent: deny10
+  examples: |
+    - नहीं मुझे [डिहाइड्रेशन]{"entity":"disease","value":"Migrane"} नहीं है
+
+- intent: deny11
+  examples: |
+    - नहीं मुझे [चिड़चिड़ापन]{"entity":"disease","value":"Migrane"} नहीं है
+
+- intent: deny12
+  examples: |
+    - नहीं मुझे [विजुअल]{"entity":"disease","value":"Migrane"} डिस्टरबेंस नहीं है
+
+- intent: deny13
+  examples: |
+    - नहीं मुझे [घुटने]{"entity":"disease","value":"Migrane"} का दर्द नहीं है
+
+- synonym: Typhoid
+  examples: |
+    - ठंड
+    - उल्टियां
+    - मसूड़ों
+    - थकावट
+    - थकान
+    - तेज
+    - आंखों
+
+- synonym: Dengue
+  examples: |
+    - उच्च
+    - जोड़ों
+    - गर्दन
+    - भूख
+    - पेशाब
+    - खुजली
+    - स्किन
+
+- synonym: Migrane
+  examples: |
+    - डिहाइड्रेशन
+    - चिड़चिड़ापन
+    - विजुअल
+    - घुटने
+    - एसिडिटी
+    - सर

@@ -1,0 +1,46 @@
+version: '3.0'
+services:
+
+  rasa_server:
+    image: rasa-bot:latest
+    working_dir: /app
+    build: "./"
+    restart: always
+    volumes:
+    - ./actions:/app/actions
+    - ./data:/app/data
+    command: bash -c "rasa run --enable-api --cors \"*\" --debug"
+    ports:
+    - '5006:5005'
+    public: true
+    networks:
+    - all
+
+  rasa_actions_serves:
+    image: rasa-bot:latest
+    working_dir: /app
+    build: "./"
+    restart: always
+    volumes:
+    - ./actions:/app/actions
+    command: ["rasa", "run", "actions"]
+    ports:
+    - '5055:5055'
+    networks:
+    - all
+  
+  rasa_frontend:
+    working_dir: /app/UI
+    build: "./rasa_frontend_container/"
+    restart: always
+    command: [ "nginx", "-g", "daemon off;" ]
+    ports:
+    - '8000:80'
+    public: true
+    networks:
+    - all
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"

@@ -1,0 +1,66 @@
+version: "3.0"
+
+- story: path1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: symp1
+  - action: utter_ask1
+  - intent: symp2
+  - action: utter_ask2
+  - intent: deny2
+  - action: utter_ask_alternative
+  - intent: symp3
+  - action: utter_ask3
+  - intent: symp4
+  - action: utter_ask4
+  - intent: deny4
+  - action: utter_ask_alternative
+  - intent: predict
+  - action: action_predict
+  - intent: thanks
+  - action: utter_thanks
+
+- story: path2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: symp5
+  - action: utter_ask5
+  - intent: symp6
+  - action: utter_ask6
+  - intent: symp7
+  - action: utter_ask7
+  - intent: deny7
+  - action: utter_ask_alternative
+  - intent: symp8
+  - action: utter_ask8
+  - intent: symp9
+  - action: utter_ask9
+  - intent: deny9
+  - action: utter_ask_alternative
+  - intent: predict
+  - action: action_predict
+  - intent: thanks
+  - action: utter_thanks
+
+- story: path3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: symp10
+  - action: utter_ask10
+  - intent: deny10
+  - action: utter_ask_alternative
+  - intent: symp11
+  - action: utter_ask11
+  - intent: symp12
+  - action: utter_ask12
+  - intent: symp13
+  - action: utter_ask13
+  - intent: deny13
+  - action: utter_ask_alternative
+  - intent: predict
+  - action: action_predict
+  - intent: thanks
+  - action: utter_thanks

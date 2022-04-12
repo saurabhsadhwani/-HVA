@@ -1,0 +1,191 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thanks
+  - predict
+  - symp1
+  - symp2
+  - symp3
+  - symp4
+  - symp5
+  - symp6
+  - symp7
+  - symp8
+  - symp9
+  - symp10
+  - symp11
+  - symp12
+  - symp13
+  - deny1
+  - deny2
+  - deny3
+  - deny4
+  - deny5
+  - deny6
+  - deny7
+  - deny8
+  - deny9
+  - deny10
+  - deny11
+  - deny12
+  - deny13
+
+slots:
+  disease:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: disease
+
+actions:
+- utter_greet
+- utter_thanks
+- utter_ask_alternative
+- utter_ask1
+- utter_ask2
+- utter_ask3
+- utter_ask4
+- utter_ask5
+- utter_ask6
+- utter_ask7
+- utter_ask8
+- utter_ask9
+- utter_ask10
+- utter_ask11
+- utter_ask12
+- utter_ask13
+- action_predict
+
+entities:
+   - disease
+
+responses:
+  
+  utter_greet:
+  - text: |
+      नमस्ते दोस्त! मैं संजीवनी बॉट हूँ | मैं तुम्हारी मदद कैसे कर सकता हूं?
+  - text: |
+      नमस्ते दोस्त! मैं संजीवनी बॉट हूँ | आपकी सेवा में 24x7! मेरे द्वारा आपके लिए क्या किया जा सकता है?
+  
+  utter_thanks:
+  - text: |
+      धन्यवाद! आपकी मदद करके खुशी हुई दोस्त|
+  - text: |
+      धन्यवाद दोस्त! आपकी मदद करके खुश हूं |
+
+  utter_ask_alternative:
+  - text: "क्या आप हमें बता सकते हैं कि आपको और क्या क्या लक्षण हैं?"
+
+  utter_ask1:
+  - text: "क्या आपको उल्टियां है?"
+    buttons:
+    - title: "हां मुझे उल्टियां है"
+      payload: /symp2
+    - title: "नहीं मुझे उल्टियां नहीं है"
+      payload: /deny1
+  
+  utter_ask2:
+  - text: "क्या आपको मसूड़ों में दर्द है?"
+    buttons:
+    - title: "हां मुझे मसूड़ों में दर्द है"
+      payload: /symp3
+    - title: "नहीं मुझे मसूड़ों में दर्द नहीं है"
+      payload: /deny2
+  
+  utter_ask3:
+  - text: "क्या आपको तेज बुखार है?"
+    buttons:
+    - title: "हां मुझे तेज बुखार है"
+      payload: /symp4
+    - title: "नहीं मुझे तेज बुखार नहीं है"
+      payload: /deny3
+  
+  utter_ask4:
+  - text: "क्या आपको आंखों में जलन है"
+    buttons:
+    - title: "हां मुझे आंखों में जलन है"
+      payload: /symp4
+    - title: "नहीं मुझे आंखों में जलन नहीं है"
+      payload: /deny4
+  
+  utter_ask5:
+  - text: "क्या आपको उच्च बुखार है"
+    buttons:
+    - title: "हां मुझे उच्च बुखार है"
+      payload: /symp6
+    - title: "नहीं मुझे उच्च बुखार नहीं है"
+      payload: /deny5
+  
+  utter_ask6:
+  - text: "क्या आपको जोड़ों में दर्द है"
+    buttons:
+    - title: "हां मुझे जोड़ों में दर्द है"
+      payload: /symp7
+    - title: "नहीं मुझे जोड़ों में दर्द नहीं है"
+      payload: /deny6
+  
+  utter_ask7:
+  - text: "क्या आपको गर्दन दर्द है"
+    buttons:
+    - title: "हां मुझे गर्दन दर्द है"
+      payload: /symp7
+    - title: "नहीं मुझे गर्दन दर्द नहीं है"
+      payload: /deny7
+  
+  utter_ask8:
+  - text: "क्या आपको भूख में कमी है"
+    buttons:
+    - title: "हां मुझे भूख में कमी है"
+      payload: /symp9
+    - title: "नहीं मुझे भूख में कमी नहीं है"
+      payload: /deny8
+  
+  utter_ask9:
+  - text: "क्या आपको पिली पेशाब है?"
+    buttons:
+    - title: "हां मुझे पिली पेशाब है"
+      payload: /symp9
+    - title: "नहीं मुझे पिली पेशाब नहीं है"
+      payload: /deny9
+  
+  utter_ask10:
+  - text: "क्या आपको डिहाइड्रेशन है?"
+    buttons:
+    - title: "हां मुझे डिहाइड्रेशन है"
+      payload: /symp10
+    - title: "नहीं मुझे डिहाइड्रेशन नहीं है"
+      payload: /deny10
+  
+  utter_ask11:
+  - text: "क्या आपको चिड़चिड़ापन है?"
+    buttons:
+    - title: "हां मुझे चिड़चिड़ापन है"
+      payload: /symp12
+    - title: "नहीं मुझे चिड़चिड़ापन नहीं है"
+      payload: /deny11
+  
+  utter_ask12:
+  - text: "क्या आपको विजुअल डिस्टरबेंस है?"
+    buttons:
+    - title: "हां मुझे विजुअल डिस्टरबेंस है"
+      payload: /symp13
+    - title: "नहीं मुझे विजुअल डिस्टरबेंस नहीं है"
+      payload: /deny12
+  
+  utter_ask13:
+  - text: "क्या आपको घुटने का दर्द है?"
+    buttons:
+    - title: "हां मुझे घुटने का दर्द है"
+      payload: /symp13
+    - title: "नहीं मुझे घुटने का दर्द नहीं है"
+      payload: /deny13
+
+
+
+session_config:
+  session_expiration_time: 600
+  carry_over_slots_to_new_session: true
