@@ -1,4 +1,4 @@
-name: rasa_frontend
+name: rasa-front
 command: bash
 volumes:
 - /root/.cache/pip
