@@ -56,7 +56,7 @@ export default {
 
       this.botTyping = true;
       // http://localhost:5005/webhooks/rest/webhook
-      axios.post('https://rasa-server-saurabhsadhwani.cloud.okteto.net/webhooks/rest/webhook', { 'message': value.text }).then((res) => {
+      axios.post('https://rasa-serve-saurabhsadhwani.cloud.okteto.net/webhooks/rest/webhook', { 'message': value.text }).then((res) => {
         var response = res['data'];
         console.log(response);
 
