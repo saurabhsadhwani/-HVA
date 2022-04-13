@@ -1,7 +1,7 @@
 version: '3.0'
 services:
 
-  rasa_server:
+  rasa-serve:
     image: rasa-bot:latest
     working_dir: /app
     build: "./"
@@ -16,7 +16,7 @@ services:
     networks:
     - all
 
-  rasa_actions_serves:
+  rasa-actions-serve:
     image: rasa-bot:latest
     working_dir: /app
     build: "./"
@@ -29,7 +29,7 @@ services:
     networks:
     - all
   
-  rasa_frontend:
+  rasa-front:
     working_dir: /app/UI
     build: "./rasa_frontend_container/"
     restart: always
